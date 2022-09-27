@@ -84,7 +84,7 @@ img {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /*==================== NAV ====================*/
@@ -103,8 +103,8 @@ img {
   top: 0;
   width: 35%;
   height: 100%;
-  background-color: var(--secondary-color);
-  transition: all 1.5s ease 0s;
+  background-color: var(--accent-color);
+  transition: all 1s ease 0s;
 }
 
 .nav__logo,
@@ -189,7 +189,7 @@ img {
   right: 0;
 }
 
-/*==================== SLIDER ====================*/
+/*==================== HOME + SLIDER ====================*/
 .home__container {
   width: 100%;
   display: flex;
@@ -197,9 +197,9 @@ img {
 
 .slide {
   height: 100vh;
+  flex: 1;
   cursor: pointer;
   color: #fff;
-  flex: 1;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -221,31 +221,27 @@ img {
   transition: all 0.5s ease 0s;
 }
 
-/* .slide:hover::before {
-  background-color: rgba(0, 0, 0, 0);
-} */
-
 .slide.active::before {
   background-color: rgba(0, 0, 0, 0);
 }
 
 .slide h3 {
   position: absolute;
-  font-size: var(--normal-font-size-1);
-  font-weight: var(--font-thin);
   bottom: 20px;
   left: 20px;
   margin: 0;
   opacity: 0;
+  font-size: var(--normal-font-size-1);
+  font-weight: var(--font-thin);
 }
 
 .slide p {
   position: absolute;
-  text-align: justify;
-  font-size: var(--normal-font-size-3);
-  bottom: -100%;
-  left: 0px;
+  bottom: -5%;
+  left: 20px;
   right: 20px;
+  font-size: var(--normal-font-size-3);
+  text-align: justify;
   opacity: 0;
   visibility: hidden;
   transition: all 0.7s ease-in-out 0.2s;
@@ -273,20 +269,136 @@ img {
   visibility: visible;
 }
 
+/*==================== PREVIEW ====================*/
+.preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.preview__container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.preview__card {
+  display: flex;
+}
+
+.preview__card:nth-child(1) {
+  margin-top: -100px;
+}
+
+.preview__card:nth-child(2) {
+  margin-top: -80px;
+}
+
+.preview__card:nth-child(3) {
+  margin-top: -50px;
+}
+
+.preview__card:nth-child(4) {
+  margin-top: 100px;
+}
+
+.preview__card:nth-child(5) {
+  margin-left: 100px;
+}
+
+.preview__card:nth-child(6) > .preview__img > .prev-image {
+  width: 1000px;
+}
+
+.preview__card:nth-child(7) {
+  margin-top: 50px;
+  margin-left: -100px;
+}
+
+.preview__title {
+  text-align: center;
+  font-size: var(--big-font-size-2);
+  font-weight: var(--font-thin);
+  margin: 150px 0px;
+}
+
+.prev-image {
+  height: 800px;
+  width: 600px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.preview__description {
+  margin-top: 30px;
+}
+
+.preview__data {
+  color: #565656;
+  font-size: var(--small-font-size-1);
+  font-weight: var(--font-regular);
+}
+
+.preview__subtitle {
+  margin-top: 10px;
+  font-size: var(--normal-font-size-3);
+  font-weight: var(--font-light);
+}
+/*==================== CONTACT ====================*/
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contact__title {
+  margin-top: 100px;
+  font-size: var(--big-font-size-1);
+  font-weight: var(--font-light);
+}
+
+.contact__subtitle {
+  margin-top: 15px;
+  font-size: var(--big-font-size-3);
+  font-weight: var(--font-thin);
+}
+
+.contanct__button {
+  padding: 20 40px;
+  margin: 100px 0px;
+  font-size: var(--small-font-size-2);
+  font-weight: var(--font-regular);
+  text-transform: uppercase;
+  border: 1px solid var(--accent-color);
+  transition: all 0.5s ease-in-out 0s;
+  cursor: pointer;
+}
+
+.contanct__button:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+}
+
 /*==================== FOOTER ====================*/
 .footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 50px 0px;
+  background-color: var(--accent-color);
   font-size: var(--small-font-size-1);
   color: var(--primary-color);
 }
 
 /*==================== TOOLTIPS ====================*/
-.tooltip {
-}
-
 .tooltip::after {
   background: rgba(0, 0, 0, 0.8);
   border-radius: 8px 8px 8px 0px;
@@ -309,6 +421,18 @@ img {
 }
 
 /* animation */
+
+.element-animation {
+  /* Скроем элемент в начальном состоянии */
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.element-animation.element-show {
+  opacity: 1;
+  transition: all 1.5s;
+  transform: translateY(0%);
+}
 
 /* .nav__close:hover {
   animation-name: spin;
