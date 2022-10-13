@@ -361,6 +361,7 @@ input {
   justify-content: center;
   align-items: center;
   text-align: center;
+  height: 100%;
 }
 
 .contact__title {
@@ -715,6 +716,84 @@ input {
     margin: 20px 0px;
   }
 
+  /*==================== CAR ====================*/
+  .car__container {
+    flex-direction: column;
+  }
+
+  .car__image {
+    height: 50vh;
+    width: 100%;
+  }
+
+  .car__description {
+    width: 100%;
+    margin: 0px 5px;
+  }
+
+  .car__description > p {
+    margin-top: 10px;
+    padding: 0px 10px;
+  }
+
+  .car__props {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .car__block-left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+  }
+
+  .car__props-title {
+    font-weight: var(--font-regular);
+    padding: 0px 10px;
+  }
+
+  .car__props-text {
+    margin: 15px 0px;
+    padding: 0px 10px;
+  }
+
+  .car__props-image {
+    height: 50vh;
+    width: 100%;
+  }
+
+  .car__info {
+    width: 100%;
+    margin: 20px 0px;
+    padding: 0px 10px;
+  }
+
+  /*==================== CONTACTS ====================*/
+  .form {
+    width: 100%;
+    margin-top: 25px;
+    padding: 0px 10px;
+  }
+
+  .contact__inputs {
+    flex-direction: column;
+  }
+
+  .contact__item {
+    padding-left: 0px;
+  }
+
+  /*==================== GALLERY ====================*/
+  .gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
   .footer {
     text-align: center;
     padding: 25px 0px;
@@ -757,5 +836,18 @@ input {
 
   .contanct__button {
     margin: 50px 0px;
+  }
+
+  .contact__inputs {
+    flex-direction: row;
+  }
+
+  .form {
+    width: 100%;
+    padding: 0px 10px;
+  }
+
+  .contact__item {
+    padding-left: 10px;
   }
 }
