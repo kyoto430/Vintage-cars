@@ -64,6 +64,14 @@ img {
   height: auto;
 }
 
+textarea,
+input {
+  width: 100%;
+  font-style: italic;
+  border: 0;
+  outline-width: 0;
+}
+
 /*==================== LAYOUT ====================*/
 .wrapper {
   width: 100%;
@@ -381,6 +389,142 @@ img {
 .contanct__button:hover {
   background-color: var(--accent-color);
   color: var(--primary-color);
+}
+/*==================== CAR ====================*/
+.car__container {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+}
+
+.car__image {
+  height: 100vh;
+  width: 50%;
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.car__description {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0px 50px;
+}
+
+.car__description > p {
+  margin-top: 25px;
+}
+
+.car__props {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.car__block-left {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 50px;
+}
+
+.car__props-title {
+  font-weight: var(--font-regular);
+}
+
+.car__props-text {
+  margin: 50px 0px;
+}
+
+.car__props-image {
+  height: 100vh;
+  width: 40%;
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.car__info {
+  width: 100%;
+  margin: 20px 0px;
+  font-size: var(--small-font-size-1);
+}
+
+.car__info-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info__bar,
+.info__percentage {
+  height: 5px;
+  border-radius: 4px;
+}
+
+.info__number {
+  padding: 5px;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+}
+
+.info__bar {
+  background-color: var(--primary-color);
+}
+
+.info__percentage {
+  display: block;
+  background-color: var(--accent-color);
+}
+
+.car-speed {
+  width: 80%;
+}
+
+.car-power {
+  width: 90%;
+}
+
+.car-style {
+  width: 100%;
+}
+
+/*==================== CONTACTS ====================*/
+.form {
+  width: 70%;
+  margin-top: 50px;
+}
+
+.contact__inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.contact__item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 25px;
+}
+
+.contact__item > input,
+.contact__item > textarea {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #565656;
+}
+/*==================== GALLERY ====================*/
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 /*==================== FOOTER ====================*/

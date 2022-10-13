@@ -44,8 +44,6 @@ function slidesPlugin(activeSlide = 0) {
   }
 }
 
-slidesPlugin(2)
-
 function onEntry(entry) {
   entry.forEach((change) => {
     if (change.isIntersecting) {
@@ -63,3 +61,5 @@ let elements = document.querySelectorAll('.element-animation')
 for (let elm of elements) {
   observer.observe(elm)
 }
+
+slidesPlugin()
